@@ -1,0 +1,2 @@
+# dotfiles
+Some software configurations.
