@@ -35,6 +35,8 @@ return {
 						"--function-arg-placeholders",
 						"--fallback-style=google",
 						"--log=error",
+						-- compile_commands 使用 g++ 时，须向 g++ 查询 libstdc++ 系统头路径（与 .clangd BuiltinHeaders: QueryDriver 配合）
+						"--query-driver=/usr/bin/*++",
 						-- "-j=4", -- 限制后台索引并发数
 						"--pch-storage=memory", -- PCH 存储在内存中（更快但要注意内存）
 						"--background-index-priority=low", -- 后台索引低优先级
